@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" 
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<head>
+  <title>Musicbox</title>
+  <link rel="stylesheet" href="../../css/style.css" />
+</head>
+		
+<body>	
+    <div class="header-line">
+        <ui:insert name="header">
+          <h2>Top Section</h2>
+        </ui:insert>
+    </div>
+    <div class="center-line">
+      <div class="menu-column">
+        <ui:insert name="menu">
+          <ul><li>Menu1</li><li>Menu2</li></ul>
+        </ui:insert>
+      </div>
+      <div class="contents-column">
+        <ui:insert name="contents">
+          Contents
+        </ui:insert>
+      </div>
+    </div>
+    <div class="bottom-line">
+        <ui:insert name="footer">Footer</ui:insert>
+    </div>
+</body>
+</html>

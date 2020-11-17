@@ -1,0 +1,9 @@
+  @Named 
+  public class UserName {
+    private String name;
+    // Getters and setters...
+  }
+
+  JSP:
+  ...
+  Hello ${userName.name}

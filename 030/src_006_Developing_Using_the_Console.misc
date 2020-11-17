@@ -1,0 +1,9 @@
+java -version
+# observe output
+
+# if you want to specify a different JDK:
+set JAVA_HOME=C:\path\to\the\jdk
+
+chdir \here\goes\the\project
+
+gradle init wrapper

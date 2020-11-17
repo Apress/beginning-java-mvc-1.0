@@ -1,0 +1,5 @@
+<div style="color:red">
+<c:forEach var="e" items="${errorMessages.msgs}">
+    ${e}
+</c:forEach>
+</div>

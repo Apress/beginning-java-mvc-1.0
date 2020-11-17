@@ -1,0 +1,4 @@
+  Hello <c:out value="${userData.name}" />
+
+  <%-- Similar to --%>
+  Hello ${userData.name}

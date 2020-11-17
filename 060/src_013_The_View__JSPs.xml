@@ -1,0 +1,4 @@
+<c:set var="firstName" value=${user.firstName} />
+<%-- We can henceforth use 'firstName' in expressions 
+     instead  of 'user.firstName' --%>
+Hi ${firstName}

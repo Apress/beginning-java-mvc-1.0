@@ -1,0 +1,2 @@
+${msg.MSG_KEY}
+<someTag someAttr="${msg.MSG_KEY}" />

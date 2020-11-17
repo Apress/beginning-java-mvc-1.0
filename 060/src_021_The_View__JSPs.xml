@@ -1,0 +1,2 @@
+Cookie name: ${cookie.theCookieName.name} <p/> 
+Cookie value: ${cookie.theCookieName.value} <p/>

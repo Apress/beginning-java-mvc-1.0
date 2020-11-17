@@ -1,0 +1,13 @@
+"loggers": {
+  "logger": [
+    {
+       "name":"book.javamvc",
+       "level":"debug",
+       "appender-ref": {
+         "ref":"appenderName"
+       }
+    }
+    ...
+  ]
+  ...
+}

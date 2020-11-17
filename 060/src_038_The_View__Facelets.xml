@@ -1,0 +1,10 @@
+...
+I'm written to the output!
+<ui:decorate template="templ.xhtml">
+    <ui:define name="def1">
+        I'm passed to "templ.xhtml", you can refer to
+        me in "templ.xhtml" via 
+        &lt;ui:insert name="def1"/&gth;
+    </ui:define>
+</ui:include>
+...

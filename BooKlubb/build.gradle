@@ -1,0 +1,75 @@
+plugins {
+    id 'war'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+  testImplementation 'junit:junit:4.12'
+  implementation 'javax:javaee-api:8.0'
+  implementation 'javax.mvc:javax.mvc-api:1.0.0'
+  implementation 'org.eclipse.krazo:krazo-jersey:1.1.0-M1'
+  implementation 'jstl:jstl:1.2'	
+}
+
+task localDeploy(dependsOn: war, 
+             description:">>> Local deploy task") {
+  doLast {
+    def FS = File.separator
+    def glassfish = 
+        project.properties['glassfish.inst.dir']
+    def user = project.properties['glassfish.user']
+    def passwd = project.properties['glassfish.passwd']
+		
+    File temp = File.createTempFile("asadmin-passwd", 
+        ".tmp")
+    temp << "AS_ADMIN_${user}=${passwd}\n"
+		
+    def sout = new StringBuilder()
+    def serr = new StringBuilder()
+    def libsDir = 
+      "${project.projectDir}${FS}build${FS}libs" 
+    def proc = """${glassfish}${FS}bin${FS}asadmin 
+        --user ${user} --passwordfile ${temp.absolutePath} 
+        deploy --force=true 
+        ${libsDir}/${project.name}.war""".execute()
+    proc.waitForProcessOutput(sout, serr)
+    println "out> ${sout}"
+    if(serr.toString()) System.err.println(serr)	
+
+    temp.delete()
+  } 
+}
+
+task localUndeploy(
+             description:">>> Local undeploy task") {
+  doLast {
+    def FS = File.separator
+    def glassfish = 
+        project.properties['glassfish.inst.dir']
+    def user = project.properties['glassfish.user']
+    def passwd = project.properties['glassfish.passwd']
+		
+    File temp = File.createTempFile("asadmin-passwd", 
+        ".tmp")
+    temp << "AS_ADMIN_${user}=${passwd}\n"
+		
+    def sout = new StringBuilder()
+    def serr = new StringBuilder()
+    def proc = """${glassfish}${FS}bin${FS}asadmin 
+        --user ${user} --passwordfile ${temp.absolutePath} 
+        undeploy ${project.name}""".execute()
+    proc.waitForProcessOutput(sout, serr)
+    println "out> ${sout}"
+    if(serr.toString()) System.err.println(serr)
+			
+    temp.delete()
+  } 
+}

@@ -1,0 +1,14 @@
+...
+#All log level details
+com.sun.enterprise.server.logging.GFFileHandler.level=ALL
+javax.enterprise.system.tools.admin.level=INFO
+org.apache.jasper.level=INFO
+javax.enterprise.system.core.level=INFO
+javax.enterprise.system.core.classloading.level=INFO
+java.util.logging.ConsoleHandler.level=FINEST
+javax.enterprise.system.tools.deployment.level=INFO
+javax.enterprise.system.core.transaction.level=INFO
+org.apache.catalina.level=INFO
+org.apache.coyote.level=INFO
+javax.level=INFO
+...

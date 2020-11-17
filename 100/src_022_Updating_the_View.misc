@@ -1,0 +1,6 @@
+title = Hello Jpa
+enter_name = Enter your name: 
+btn_delete = Delete
+btn_submit = Submit
+tblhdr_id = ID
+tblhdr_name = Name

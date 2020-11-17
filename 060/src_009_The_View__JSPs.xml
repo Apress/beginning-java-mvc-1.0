@@ -1,0 +1,7 @@
+    <% 
+        Any Java code
+        ... 
+
+    <%= 
+        Any Java expression (semicolons not allowed)
+        ... 

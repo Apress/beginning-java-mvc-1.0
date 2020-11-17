@@ -1,0 +1,3 @@
+<c:if test="${showIncome}">  
+   <p>Your income is: <c:out value="${income}"/></p>  
+</c:if>  

@@ -1,0 +1,3 @@
+<c:forEach items="${theList}" var="item">
+  ${item} <br/>
+</c:forEach}

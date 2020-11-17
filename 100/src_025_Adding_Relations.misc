@@ -1,0 +1,7 @@
+CREATE TABLE STATUS (
+    ID          INT           NOT NULL,
+    MEMBER_ID   INT           NOT NULL,
+    NAME        VARCHAR(128)  NOT NULL,
+	PRIMARY KEY (ID));
+
+CREATE SEQUENCE STATUS_SEQ start with 1 increment by 50;

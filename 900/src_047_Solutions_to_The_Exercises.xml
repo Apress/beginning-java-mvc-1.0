@@ -1,0 +1,18 @@
+<table>
+  <thead>
+    <tr>
+        ...
+        <th>${msg.tblhdr_status}</th>
+        ...
+    </tr>
+  <thead>
+  <tbody>
+      <c:forEach ... >
+        <tr ...>
+          ...
+          <td>${itm.statusLst}</td>
+          ...
+        </tr>
+      </c:forEach>
+  </tbody>
+</table>

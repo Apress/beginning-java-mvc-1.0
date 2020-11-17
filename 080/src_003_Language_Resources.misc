@@ -1,0 +1,14 @@
+-- File 'Messages.properties':
+msg.first = First Message
+msg.second = Second Message
+msg.third = Third Message
+
+-- File 'Messages_en.properties':
+msg.first = First Message
+msg.second = Second Message
+msg.third = Third Message
+
+-- File 'Messages_de.properties':
+msg.first = Erste Nachricht
+msg.second = Zweite Nachricht
+msg.third = Dritte Nachricht

@@ -1,0 +1,39 @@
+<%@ page contentType="text/html;charset=UTF-8" 
+    language="java" %>
+<%@ taglib prefix="c" 
+    uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" 
+    uri="http://java.sun.com/jsp/jstl/fmt" %>
+<html>
+...
+  <%-- Supposing ${dbl1} refers to a float or double --%>
+
+  <fmt:formatNumber value="${dbl1}" type="number" 
+        var="n1" />
+  <%-- <= Use Java's DecimalFormat class to format  --%>
+  <%-- the number. Store as string in variable n1   --%>
+
+  <fmt:formatNumber value="${dbl1}" type="currency" 
+        var="n1" />
+  <%-- <= Format as currency                        --%>
+
+  <fmt:formatNumber value="${dbl1}" type="percent" 
+        var="n1" />
+  <%-- <= Format as percentage                      --%>
+
+  <fmt:formatNumber value="${dbl1}" type="number"
+        maxFractionDigits="6" 
+        minFractionDigits="2" 
+        var="n1" />
+  <%-- <= We can set the minimum and maximum        --%>
+  <%-- number of fraction digits                    --%>
+
+  <fmt:formatNumber value="${dbl1}" type="number"
+        pattern="#,##0.00;(#,##0.00)" 
+        var="n1" />
+  <%-- <= Set the pattern according to the          --%>
+  <%-- DecimalFormat API documentation              --%>
+
+  The number reads: ${n1} 
+...
+</html>

@@ -1,0 +1,9 @@
+...
+Hello ${name}
+<div>
+    <a href="${mvc.uriBuilder(
+             'HelloWorldController#showIndex').
+             queryParam('name', name).
+             build()}">Back</a>
+</div>
+...

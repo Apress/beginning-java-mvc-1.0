@@ -1,0 +1,2 @@
+<ui:remove> ${msg} is the localized bundle variable, 
+     registered by class SetBundleFilter   </ui:remove>

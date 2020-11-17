@@ -1,0 +1,58 @@
+<%@ page contentType="text/html;charset=UTF-8" 
+    language="java" %>
+<%@ taglib prefix="c" 
+    uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" 
+    uri="http://java.sun.com/jsp/jstl/fmt" %>
+<html>
+...
+  <%-- Supposing ${date1} refers to a java.util.Date --%>
+
+  <fmt:formatDate value="${date1}" type="date"
+        var="d1" />
+  <%-- <= Use Java's DateFormat class to format a   --%>
+  <%-- day (ignore the time-of-day) in the user's   --%>
+  <%-- locale default format.                       --%>
+  <%-- Store the result in page scope variable "d1" --%>
+
+  <fmt:formatDate value="${date1}" type="date"
+        dateStyle="long"
+        var="d1" />
+  <%-- <= Use Java's DateFormat class to format a   --%>
+  <%-- day in the user's locale "long" format       --%>
+  <%-- Instead of "long" you can also write         --%>
+  <%-- "default", "short", "medium", "long" or      --%>
+  <%-- "full"                                       --%>
+
+  <fmt:formatDate value="${date1}" type="time"
+        var="d1" />
+  <%-- <= Use Java's DateFormat class to format a   --%>
+  <%-- time-of-day (ignore the day) in the user's   --%>
+  <%-- locale default format.                       --%>
+  <%-- Store the result in page scope variable "d1" --%>
+
+  <fmt:formatDate value="${date1}" type="time"
+        timeStyle="long"
+        var="d1" />
+  <%-- Time-of-day in long format.                  --%> 
+  <%-- Instead of "long" you can also write         --%>
+  <%-- "default", "short", "medium", "long" or      --%>
+  <%-- "full"                                       --%>
+
+  <fmt:formatDate value="${date1}" type="both"
+        var="d1" />
+  <%-- Write both day and time-of day. Use          --%>
+  <%-- "dateStyle" and "timeStyle" to control the   --%>
+  <%-- day and time-of-day styling as described     --%>
+  <%-- above.                                       --%>
+
+  <fmt:formatDate value="${date1}"
+        pattern="yyyy-MM-dd hh:mm:ss"
+        var="d1" />
+  <%-- Write day and/or time, as descibed by the    --%>
+  <%-- pattern (see class SimpleDateFormat for a    --%>
+  <%-- pattern description).                        --%>
+
+  The date reads: ${d1} 
+...
+</html>

@@ -1,0 +1,9 @@
+  ...
+  import javax.servlet.http.HttpSession;
+  ...
+
+  @Controller
+  public class SomeController {
+      @Inject private HttpSession httpSession; 
+      ...
+  }

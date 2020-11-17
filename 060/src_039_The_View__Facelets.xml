@@ -1,0 +1,9 @@
+<DOCTYPE html>
+<html ...><head>...</head>
+<h:body>
+  ...
+  <table>
+      [Some table|
+  </table>
+  ...
+</h:body></html>

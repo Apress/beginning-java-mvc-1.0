@@ -1,0 +1,4 @@
+<a href="${mvc.uriBuilder('SomeController#someMethod').
+           queryParam('name', userData.name).
+           queryParam('birthday', userData.birthday).
+           build()}">Link</a>

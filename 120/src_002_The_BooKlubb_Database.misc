@@ -1,0 +1,26 @@
+CREATE TABLE MEMBER (
+    ID          INT           NOT NULL,
+    FIRST_NAME  VARCHAR(128)  NOT NULL,
+    LAST_NAME   VARCHAR(128)  NOT NULL,
+    BIRTHDAY    DATE          NOT NULL,
+    SSN         VARCHAR(16)   NOT NULL,
+    PRIMARY KEY (ID));
+CREATE SEQUENCE MEMBER_SEQ start with 1 increment by 1;
+
+CREATE TABLE BOOK (
+    ID          INT           NOT NULL,
+    TITLE       VARCHAR(128)  NOT NULL,
+    AUTHOR_FIRST_NAME  VARCHAR(128)  NOT NULL,
+    AUTHOR_LAST_NAME   VARCHAR(128)  NOT NULL,
+    MAKE        DATE          NOT NULL,
+    ISBN        VARCHAR(24)   NOT NULL,
+    PRIMARY KEY (ID));
+CREATE SEQUENCE BOOK_SEQ start with 1 increment by 1;
+
+CREATE TABLE RENTAL (
+    ID          INT   NOT NULL,
+    MEMBER_ID   INT   NOT NULL,
+    BOOK_ID     INT   NOT NULL,
+    RENTAL_DAY  DATE  NOT NULL,
+    PRIMARY KEY (ID));
+CREATE SEQUENCE RENTAL_SEQ start with 1 increment by 1;

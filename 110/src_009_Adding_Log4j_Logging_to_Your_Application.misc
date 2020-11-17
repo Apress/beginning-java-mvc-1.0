@@ -1,0 +1,12 @@
+// Added for Log4j2
+grant {
+    permission 
+        java.lang.reflect.ReflectPermission 
+        "suppressAccessChecks";
+    permission  
+        javax.management.MBeanServerPermission "*";
+    permission 
+        javax.management.MBeanPermission "*", "*";
+    permission  
+        java.lang.RuntimePermission "getenv.*";
+};  

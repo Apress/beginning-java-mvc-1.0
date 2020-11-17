@@ -1,0 +1,21 @@
+<%@ page contentType="text/html;charset=UTF-8" 
+    language="java" %>
+<%@ taglib prefix="c" 
+    uri="http://java.sun.com/jsp/jstl/core" %>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+</head>
+<body>
+  <form method="post" 
+        action="${mvc.uriBuilder(
+          'HelloWorldController#greeting').build()}">
+    Enter your name: 
+      <input type="text" name="name" /> 
+    Enter your age: 
+      <input type="text" name="age" /> 
+    <input type="submit" value="Submit" />
+  </form>
+</body>
+</html>

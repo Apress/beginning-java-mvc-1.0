@@ -1,0 +1,50 @@
+{
+"configuration": {
+  "name": "Default",
+  "appenders": {
+    "RollingFile": {
+      "name":"File",
+      "fileName":
+          "${sys:com.sun.aas.instanceRoot}/logs/log4j.log",
+      "filePattern":
+          "${sys:com.sun.aas.instanceRoot}/
+           logs/log4j-backup-%d{MM-dd-yy-HH-mm-ss}-%i.gz",
+      "PatternLayout": {
+         "pattern":
+             "%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n"
+      },
+      "Policies": {
+         "SizeBasedTriggeringPolicy": {
+            "size":"10 MB"
+         }
+      },
+      "DefaultRolloverStrategy": {
+         "max":"10"
+      }
+    }
+  },
+  "loggers": {
+    "logger" : [
+      {
+        "name" : "book.javamvc",
+        "level":"debug",
+        "appender-ref": {
+          "ref":"File"
+        }
+      },{
+        "name" : "some.other.logger",
+        "level":"debug",
+        "appender-ref": {
+          "ref":"File"
+        }
+      }
+    ],
+    "root": {
+       "level":"debug",
+       "appender-ref": {
+         "ref":"File"
+       }
+    }
+  }
+}
+}

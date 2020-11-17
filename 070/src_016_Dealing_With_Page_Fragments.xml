@@ -1,0 +1,43 @@
+...
+<head>
+    ...
+    <script type="text/javascript" 
+      src="${mvc.basePath}/../js/jquery-3.5.1.min.js">
+    </script>
+</head>
+<body>
+    ...
+    <form>
+      <script type="text/javascript">
+          function submitAge() {
+            var age = jQuery('#age').val();
+            var url = "${mvc.uriBuilder(
+              'HelloWorldController#ageAjax').
+              build()}";
+            jQuery.ajax({
+              url : url,
+              method: "POST",
+              data : { age: age },
+              dataType: 'text',
+              success: function(data, textStatus, jqXHR) {
+                jQuery('#ajax-response').html(data);
+              },
+              error: function (jqXHR, textStatus, 
+                    errorThrown) {
+                console.log(errorThrown);
+              }
+            });
+            return false;
+          }
+      </script>
+      Enter your age: <input type="text" id="age" />
+      <button onclick="return submitAge()">Submit</button>
+  </form>
+  <div>
+      <span>AJAX Response: </span>
+      <div id="ajax-response">
+      </div>
+  </div>
+  ...
+</body>
+...

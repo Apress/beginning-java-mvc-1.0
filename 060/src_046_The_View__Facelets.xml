@@ -1,0 +1,24 @@
+<!-- File commonHeader.xhtml --> 
+<!DOCTYPE html>
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:ui="http://java.sun.com/jsf/facelets">
+  <h2>Musicbox</h2>
+</div>
+
+<!-- File commonMenu.xhtml --> 
+<!DOCTYPE html>
+<div xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets">	
+  <ul>
+    <li><a href="titles">Titles</a></li>
+    <li><a href="composers">Composers</a></li>
+    <li><a href="performers">Performers</a></li>
+  </ul>
+</div>
+
+<!-- File commonFooter.xhtml -->
+<!DOCTYPE html>
+<div xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+  (c) The Musicbox company 2019
+</div>

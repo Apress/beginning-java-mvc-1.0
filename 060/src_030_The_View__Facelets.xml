@@ -1,0 +1,5 @@
+<ui:composition template="templ.xhtml"> 
+    <ui:define name = "someName"> ... </ui:define> 
+    <ui:define name = "someName2"> ... </ui:define> 
+    ...
+</ui:composition>

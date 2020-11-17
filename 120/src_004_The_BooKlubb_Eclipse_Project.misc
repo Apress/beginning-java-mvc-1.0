@@ -1,0 +1,3 @@
+glassfish.inst.dir = /path/to/your/glassfish5.1
+glassfish.user = admin
+glassfish.passwd = 

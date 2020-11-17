@@ -1,0 +1,16 @@
+  Controller:
+
+  import javax.mvc.Models;
+  ...
+  @Controller
+  public class SomeController {
+    @Inject private Models models;
+    ...
+    // inside any method:    
+    models.put("name", name);
+    ...
+  }
+
+  JSP:
+  ...
+  Hello ${name}

@@ -1,0 +1,8 @@
+<form method="post" 
+    action="${mvc.uriBuilder(
+    'HelloWorldController#greeting').build()}">
+  ...
+  ${msg.enter_rank} 
+      <input type="text" name="rank" /> 
+  <input type="submit" value="${msg.btn_submit}" />
+</form>

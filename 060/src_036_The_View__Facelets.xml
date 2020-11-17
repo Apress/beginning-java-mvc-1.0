@@ -1,0 +1,3 @@
+<ui:include src="comp1.xhtml">
+    <ui:param name="id" value="c1" />
+</ui:include>

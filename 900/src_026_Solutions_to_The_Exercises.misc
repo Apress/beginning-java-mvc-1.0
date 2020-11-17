@@ -1,0 +1,19 @@
+## File Messages.properties:
+title = Hello World
+enter_name = Enter your name: 
+enter_age = Enter your age:
+btn_submit = Submit
+btn_back = Back
+ajax_response = AJAX Response:
+response_hello = Hello
+response_age = your age is
+
+## File Messages_de.properties:
+title = Hallo Welt
+enter_name = Dein Name: 
+enter_age = Dein Alter:
+btn_submit = Absenden
+btn_back = Zurück
+ajax_response = AJAX-Antwort:
+response_hello = Hallo
+response_age = Dein Alter ist

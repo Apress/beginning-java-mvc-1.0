@@ -1,0 +1,4 @@
+http://localhost:8080/TheWAR/mvc/controllerPath
+    -> method showIndex()
+http://localhost:8080/TheWAR/mvc/controllerPath/b
+    -> method showSomeOtherPage()

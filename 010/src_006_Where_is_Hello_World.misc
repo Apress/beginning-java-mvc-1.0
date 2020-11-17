@@ -1,0 +1,17 @@
+set JAVA_HOME=C:\dev\java-se-8u41-ri
+
+mkdir build
+CD build && RMDIR /S /Q .
+CD ..
+rmdir build
+
+xcopy src\webapp build /s /e /i
+mkdir build\WEB-INF\classes
+
+    -cp src\webapp\WEB-INF\lib\javaee-api-8.0.jar;
+        src\webapp\WEB-INF\lib\javax.mvc-api-1.0.0.jar ^
+    -d build\WEB-INF\classes ^
+    src\java\book\javamvc\helloworld/* 
+
+cd build
+cd ..

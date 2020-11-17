@@ -1,0 +1,9 @@
+...
+<form method="post" 
+    action="${mvc.uriBuilder(
+    'HelloWorldController#greeting').build()}">
+  Enter your name: 
+  <input type="text" name="name" value="${name}" /> 
+  <input type="submit" value="Submit" />
+</form>
+...

@@ -1,0 +1,8 @@
+<body>
+  Hello ${userData.name}
+  <div>
+      <a href="${mvc.uriBuilder(
+        'HelloWorldController#showIndex'
+        ).build()}">Back</a>
+  </div>
+</body>

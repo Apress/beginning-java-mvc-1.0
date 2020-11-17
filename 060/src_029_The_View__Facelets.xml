@@ -1,0 +1,3 @@
+<ui:composition template="templ.xhtml"> 
+    ... 
+</ui:composition>

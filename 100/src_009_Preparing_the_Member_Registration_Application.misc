@@ -1,0 +1,11 @@
+CREATE TABLE MEMBER (
+    ID      INT           NOT NULL,
+    NAME    VARCHAR(128)  NOT NULL,
+    PRIMARY KEY (ID));
+
+INSERT INTO MEMBER (ID, NAME)
+   VALUES (-3, 'John'),
+          (-2, 'Linda'),
+          (-1, 'Pat');
+
+CREATE SEQUENCE MEMBER_SEQ start with 1 increment by 50;

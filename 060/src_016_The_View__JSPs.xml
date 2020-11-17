@@ -1,0 +1,30 @@
+<%@ page contentType="text/html;charset=UTF-8" 
+    language="java" %>
+<%@ taglib prefix="c" 
+    uri="http://java.sun.com/jsp/jstl/core" %>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Last Name</th>
+        <th>First Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <c:forEach items="${members.list}" var="item">
+        <tr>
+           <td>${item.id}</td>
+           <td>${item.lastName}</td>
+           <td>${item.firstName}</td>
+        </tr>
+      </c:forEach>
+    </tbody>
+  </table>  
+</body>
+</html>

@@ -1,0 +1,18 @@
+<%@ page contentType="text/html;charset=UTF-8" 
+    language="java" %>
+<%@ taglib prefix="c" 
+    uri="http://java.sun.com/jsp/jstl/core" %>
+<html>
+...
+<body>
+  ...
+  <form method="post" 
+        action="${mvc.uriBuilder(
+                'SomeController#someMethod').build()}">
+    P1 Parameter: <input type="text" name="p1" /> 
+    P2 Parameter: <input type="text" name="p2" /> 
+    ...
+  </form>
+  ...
+</body>
+</html>
